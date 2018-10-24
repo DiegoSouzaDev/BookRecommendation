@@ -1,25 +1,8 @@
-# Zenjob - Book Recommendation Task
+# Book Recommendation Task
 
 This is a brief proposal to solve the Book recommendation challenge, to the interview process for the Backend Engineer role.
 
-#### Received description of the challenge
-The goal of this challenge is to show how you approach a new task, interpret requirements, fill their gaps and provide a suitable solution. 
-Furthermore, we want to see your understanding of basic REST APIs and how you write your code. After you finish your challenge we want to review it together with you.
-When you select your tools for solving the challenge, keep in mind that on the position you applied for, we currently use mainly Groovy. 
-Therefore we recommend you to use either Groovy, Java or a similar JVM language. If you don't know which framework could be suitable, consider the latest version of Grails.
-
-#### Task:
-Provide a simple book recommendation service which is usable via a REST API. 
-It needs to be possible to define a new user, who will then be provided with 20 book recommendations. 
-For a recommendation of a user feedback can be provided. 
-The feedback can either be "liked the book", "disliked the book" or "not interested".
-Requirements:
-Users are identified by their username.
-The list of recommendations should contain exactly 20 entries if possible.
-The code should be tested as appropriated.
-A suitable dataset for the books is findable alongside this challenge. 
-
-#### Understanding:
+#### Understanding of the Task:
 The ideal scenario would take longer then the suggested time to solve this task, so, I will describe a "basic scenario" to the solution and, in a later topic, describe how I figure the ideal scenario. 
 
 #### Basic Solution:
@@ -32,7 +15,7 @@ The basic solution consists in the following itens:
 
 ##### Technical description for the basic solution:
 **Project**
-`JAVA 8` -- `Spring boot` -- `MAVEN`
+`JAVA 8` -- `Spring boot` -- `MAVEN` -- `JUnit`
 `Clean Architecture`
 
 **Entity:**
@@ -60,5 +43,10 @@ User -- Book -- Recommendation
 
 **Usecase:**
 `RecommendationUsecase` 
+
+|Method | Resposibility |
+|-------------|-------------|
+|generateStartRecommendation| Provide a new user with 20 book recommendation|
+|recommendABook| Provide a new book recommendation to a user. A book can only be recommended once to the same user   |
 
 
