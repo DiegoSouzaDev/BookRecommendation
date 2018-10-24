@@ -1,4 +1,4 @@
-# # Zenjob - Book Recommendation Task
+Zenjob - Book Recommendation Task
 
 This is a brief proposal to solve the Book recommendation challenge, to the interview process for the Backend Engineer role.
 
@@ -40,15 +40,17 @@ User -- Book -- Recommendation
 
 **Controller:**
 `UserRestController`
+
 | HttpMethod | Method | Description |
 |------------|--------|-------------|
 | `POST` | create |  Receives a `string` username and create a user, if it does not exist. |
-| `GET` | getAll | Returns a Username list containing all the existing users in the application.
+| `GET` | getAll | Returns a Username list containing all the existing users in the application.|
 
 `RecommendationRestController`
 | HttpMethod | Method | Description |
 |------------|--------|-------------|
 |`GET`|getByUserName|Return all the **valid** recommendations for given `username`. By valid, are all the recommendations that doesnt have a feedback.|
+
 `FeedBackRestController`
 | HttpMethod | Method | Description |
 |------------|--------|-------------|
