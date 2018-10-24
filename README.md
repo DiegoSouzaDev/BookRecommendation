@@ -1,4 +1,4 @@
-Zenjob - Book Recommendation Task
+# Zenjob - Book Recommendation Task
 
 This is a brief proposal to solve the Book recommendation challenge, to the interview process for the Backend Engineer role.
 
@@ -47,11 +47,13 @@ User -- Book -- Recommendation
 | `GET` | getAll | Returns a Username list containing all the existing users in the application.|
 
 `RecommendationRestController`
+
 | HttpMethod | Method | Description |
 |------------|--------|-------------|
 |`GET`|getByUserName|Return all the **valid** recommendations for given `username`. By valid, are all the recommendations that doesnt have a feedback.|
 
 `FeedBackRestController`
+
 | HttpMethod | Method | Description |
 |------------|--------|-------------|
 |`POST`|create|Receives the `recommendationId` and a `int` parameter (`-1`, `0`, `1`) representing a negative, neutral or positive feedback. This parameter will be used to update the recommendation and by that, generate a new recommendation to the received username|
